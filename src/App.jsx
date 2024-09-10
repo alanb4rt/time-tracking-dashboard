@@ -1,6 +1,8 @@
 import { useState } from "react";
+import Dashboard from "./components/Dashboard";
 import TimeframeMenu from "./components/TimeframeMenu";
 import UserProfile from "./components/UserProfile";
+import data from "./data/data.json";
 
 export default function App() {
   const firstName = "Jeremy";
@@ -20,6 +22,7 @@ export default function App() {
                 setTimeframe={setTimeframe}
               />
             </div>
+            <Dashboard data={data} timeframe={timeframe} />
           </div>
         </div>
       </div>
