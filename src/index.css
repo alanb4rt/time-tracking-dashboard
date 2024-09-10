@@ -16,12 +16,12 @@
   /* Colors */
   --blue: hsl(246 80% 60%);
 
-  --light-red: hsl(15 100% 70%); /* (work) */
-  --soft-blue: hsl(195 74% 62%); /* (play) */
-  --light-red: hsl(348 100% 68%); /* (study) */
-  --lime-green: hsl(145 58% 55%); /* (exercise) */
-  --violet: hsl(264 64% 52%); /* (social) */
-  --soft-orange: hsl(43 84% 65%); /* (self care) */
+  --color-work: hsl(15 100% 70%);
+  --color-play: hsl(195 74% 62%);
+  --color-study: hsl(348 100% 68%);
+  --color-exercise: hsl(145 58% 55%);
+  --color-social: hsl(264 64% 52%);
+  --color-self-care: hsl(43 84% 65%);
 
   --very-dark-blue: hsl(226 43% 10%);
   --dark-blue: hsl(235 46% 20%);
@@ -36,8 +36,9 @@
 body {
   margin: 0;
   padding: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+
+  background-color: var(--very-dark-blue);
+  color: white;
 }
