@@ -13,7 +13,7 @@ export default function App() {
   return (
     <>
       <div className="flex items-center min-h-screen">
-        <div className="w-full max-w-screen-xl mx-auto p-4">
+        <div className="w-full max-w-screen-lg mx-auto p-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="md:row-span-2 flex flex-col bg-[var(--dark-blue)] rounded-2xl overflow-hidden">
               <UserProfile firstName={firstName} lastName={lastName} />
