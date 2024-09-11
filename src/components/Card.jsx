@@ -12,7 +12,7 @@ export default function Card({ item, timeframe, color }) {
 
   return (
     <div
-      className={`relative rounded-2xl pt-8 overflow-hidden`}
+      className="group relative rounded-2xl pt-8 overflow-hidden"
       style={{ backgroundColor: color }}
     >
       <img
@@ -20,14 +20,14 @@ export default function Card({ item, timeframe, color }) {
         src={`./src/assets/images/icon-${item.title.replace(" ", "-")}.svg`}
         alt={`icon ${item.title}`}
       />
-      <div className="relative h-full bg-[var(--dark-blue)] rounded-2xl p-6 cursor-pointer">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="font-bold">{item.title}</h2>
-          <img src={iconEllipsis} alt="..." />
+      <div className="relative h-full bg-[var(--dark-blue)] rounded-t-2xl p-6 cursor-pointer hover:brightness-[1.75]">
+        <div className="flex justify-between items-center mb-6">
+          <h2 className="font-medium">{item.title}</h2>
+          <img className="hover:brightness-200" src={iconEllipsis} alt="..." />
         </div>
         <div>
-          <p className="text-4xl font-light">{current}hrs</p>
-          <p className="text-sm opacity-75">
+          <p className="text-5xl font-light mb-2">{current}hrs</p>
+          <p className="text-sm opacity-50">
             {timeframeText} - {previous}hrs
           </p>
         </div>

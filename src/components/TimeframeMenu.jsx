@@ -6,8 +6,8 @@ export default function TimeframeMenu({ timeframe, setTimeframe }) {
       {menu.map((time) => (
         <li
           key={time}
-          className={`cursor-pointer w-fit capitalize ${
-            timeframe === time ? "font-bold" : "opacity-50"
+          className={`cursor-pointer w-fit capitalize hover:text-white ${
+            timeframe === time ? "font-white" : "text-[--desaturated-blue]"
           }`}
           onClick={() => setTimeframe(time)}
         >
