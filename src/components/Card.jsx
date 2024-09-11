@@ -15,7 +15,7 @@ export default function Card({ item, timeframe, color }) {
 
   return (
     <div
-      className="group relative rounded-2xl pt-8 overflow-hidden"
+      className="group relative rounded-2xl pt-9 overflow-hidden"
       style={{ backgroundColor: color }}
     >
       <img
