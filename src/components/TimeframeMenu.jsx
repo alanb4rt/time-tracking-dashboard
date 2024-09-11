@@ -2,7 +2,7 @@ export default function TimeframeMenu({ timeframe, setTimeframe }) {
   const menu = ["daily", "weekly", "monthly"];
 
   return (
-    <ul className="flex flex-col gap-2 p-6">
+    <ul className="flex justify-between md:flex-col gap-2 p-6">
       {menu.map((time) => (
         <li
           key={time}

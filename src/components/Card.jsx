@@ -28,8 +28,8 @@ export default function Card({ item, timeframe, color }) {
           <h2 className="font-medium">{item.title}</h2>
           <img className="hover:brightness-200" src={iconEllipsis} alt="..." />
         </div>
-        <div>
-          <p className="text-5xl font-light mb-2">{current}hrs</p>
+        <div className="flex justify-between items-center sm:items-stretch sm:flex-col gap-2">
+          <p className="text-2xl sm:text-5xl font-light">{current}hrs</p>
           <p className="text-sm opacity-50">
             {timeframeText} - {previous}hrs
           </p>
