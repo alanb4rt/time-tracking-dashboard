@@ -1,8 +1,12 @@
+import { getImageURL } from "../utils/getImageURL";
+
 export default function UserProfile({ firstName, lastName }) {
+  const imageURL = `image-${firstName.toLowerCase()}.png`;
+
   return (
     <div className="flex flex-col h-full bg-[var(--blue)] rounded-2xl p-6">
       <img
-        src={`./src/assets/images/image-${firstName.toLowerCase()}.png `}
+        src={getImageURL(imageURL)}
         alt={firstName}
         className="rounded-full outline outline-2 mb-4 size-16"
       />

@@ -1,4 +1,5 @@
 import iconEllipsis from "../assets/images/icon-ellipsis.svg";
+import { getImageURL } from "../utils/getImageURL";
 
 export default function Card({ item, timeframe, color }) {
   const { current, previous } = item.timeframes[timeframe];
@@ -10,6 +11,8 @@ export default function Card({ item, timeframe, color }) {
       ? "Last Week"
       : "Last Month";
 
+  const iconURL = `icon-${item.title.toLowerCase().replace(" ", "-")}.svg`;
+
   return (
     <div
       className="group relative rounded-2xl pt-8 overflow-hidden"
@@ -17,7 +20,7 @@ export default function Card({ item, timeframe, color }) {
     >
       <img
         className="absolute -top-2 right-4"
-        src={`./src/assets/images/icon-${item.title.replace(" ", "-")}.svg`}
+        src={getImageURL(iconURL)}
         alt={`icon ${item.title}`}
       />
       <div className="relative h-full bg-[var(--dark-blue)] rounded-t-2xl p-6 cursor-pointer hover:brightness-[1.75]">
