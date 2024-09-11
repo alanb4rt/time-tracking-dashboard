@@ -30,7 +30,7 @@ export default function Card({ item, timeframe, color }) {
         </div>
         <div className="flex justify-between items-center sm:items-stretch sm:flex-col gap-2">
           <p className="text-2xl sm:text-5xl font-light">{current}hrs</p>
-          <p className="text-sm opacity-50">
+          <p className="text-sm opacity-60 leading-[inherit]">
             {timeframeText} - {previous}hrs
           </p>
         </div>
