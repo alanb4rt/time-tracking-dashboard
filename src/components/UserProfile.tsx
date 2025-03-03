@@ -1,6 +1,11 @@
 import { getImageURL } from "../utils/getImageURL";
 
-export default function UserProfile({ firstName, lastName }) {
+interface UserProfileProps {
+  firstName: string;
+  lastName: string;
+}
+
+export default function UserProfile({ firstName, lastName }: UserProfileProps) {
   const imageURL = `image-${firstName.toLowerCase()}.png`;
 
   return (

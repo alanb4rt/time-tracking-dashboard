@@ -1,7 +1,14 @@
 import iconEllipsis from "../assets/images/icon-ellipsis.svg";
+import { DataType, TimeframeType } from "../types/data.types";
 import { getImageURL } from "../utils/getImageURL";
 
-export default function Card({ item, timeframe, color }) {
+interface CardProps {
+  item: DataType;
+  timeframe: TimeframeType;
+  color: string;
+}
+
+export default function Card({ item, timeframe, color }: CardProps) {
   const { current, previous } = item.timeframes[timeframe];
 
   const timeframeText =
@@ -11,7 +18,8 @@ export default function Card({ item, timeframe, color }) {
       ? "Last Week"
       : "Last Month";
 
-  const iconURL = `icon-${item.title.toLowerCase().replace(" ", "-")}.svg`;
+  const iconIdentifier = item.title.toLowerCase().replace(" ", "-")
+  const iconURL = `icon-${iconIdentifier}.svg`;
 
   return (
     <section

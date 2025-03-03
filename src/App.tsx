@@ -3,12 +3,13 @@ import Dashboard from "./components/Dashboard";
 import TimeframeMenu from "./components/TimeframeMenu";
 import UserProfile from "./components/UserProfile";
 import data from "./data/data.json";
+import { TimeframeType } from "./types/data.types";
 
 export default function App() {
   const firstName = "Jeremy";
   const lastName = "Robson";
 
-  const [timeframe, setTimeframe] = useState("weekly");
+  const [timeframe, setTimeframe] = useState<TimeframeType>("weekly");
 
   return (
     <>

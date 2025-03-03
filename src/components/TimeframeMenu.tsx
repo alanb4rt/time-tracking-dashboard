@@ -1,5 +1,13 @@
-export default function TimeframeMenu({ timeframe, setTimeframe }) {
-  const menu = ["daily", "weekly", "monthly"];
+import { Dispatch, SetStateAction } from "react";
+import { TimeframeType } from "../types/data.types";
+
+interface TimeframeMenuProps {
+  timeframe: TimeframeType;
+  setTimeframe: Dispatch<SetStateAction<TimeframeType>>;
+}
+
+export default function TimeframeMenu({ timeframe, setTimeframe }: TimeframeMenuProps) {
+  const menu: TimeframeType[] = ["daily", "weekly", "monthly"];
 
   return (
     <ul className="flex justify-between md:flex-col gap-2 p-6">
